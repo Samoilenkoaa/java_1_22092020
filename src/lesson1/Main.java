@@ -56,13 +56,13 @@ public class Main {
             System.out.println("Високосный");
         }
         else if(number % 100 == 0) {
-            System.out.println("Не високосный");
+            System.out.println("Невисокосный");
         }
         else if(number % 4 == 0) {
             System.out.println("Високосный");
         }
         else {
-            System.out.println("Не високосный");
+            System.out.println("Невисокосный");
         }
 
     }
