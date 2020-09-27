@@ -10,7 +10,8 @@ public class Main {
         System.out.println(minimum(arr5));
         System.out.println(checkBalance(new int[]{1, 1, 1, 2, 1})); // true
         System.out.println(checkBalance(new int[]{2, 1, 1, 2, 1})); // false
-        shiftArray(new int[] {3,4,5,6,7}, 1);
+        shiftArrayRight(new int[]{1, 2, 3, 4, 5}, 1);
+        shiftArrayLeft(new int[]{1, 2, 3, 4, 5}, -1);
 
 
 
@@ -100,28 +101,32 @@ public class Main {
 
     }
 // ЗАДАЧА № 7
-    static void shiftArray(int[] arr, int n) {
-        if (n > 0) {
-            for (int i = 0; i < n; i++) {
-                // Right
-                int tmp = arr[arr.length - 1];
-                for (int j = arr.length - 1; j > 0; j--) {
-                    arr[j] = arr[j - 1];
-                }
-                arr[0] = tmp;
-            }
-        } else if (n < 0) {
-            for (int i = 0; i < n * (-1); i++) {
-                // Left
-                int tmp = arr[0];
-                for (int j = 0; j < arr.length - 1; j++) {
-                    arr[j] = arr[j + 1];
-                }
-                arr[arr.length - 1] = tmp;
-            }
+static void shiftArrayRight(int[] arr, int n) {
+    for (int i = 0; i < n; i++) {
+        int tmp = arr[arr.length - 1];
+
+        for (int j = arr.length - 2; j >= 0; j--) {
+            arr[j + 1] = arr[j];
         }
-        for (int i : arr) {
-            System.out.print(i + " ");
+        arr[0] = tmp;
+    }
+
+    for (int y : arr) {
+        System.out.print(y);
+    }
+    System.out.println();
+}
+
+    static void shiftArrayLeft(int[] arr, int n) {
+        for (int i = 0; i < n * (-1); i++) {
+            int tmp = arr[0];
+            for (int j = 0; j < arr.length - 1; j++) {
+                arr[j] = arr[j + 1];
+            }
+            arr[arr.length-1] = tmp;
+        }
+        for(int x : arr) {
+            System.out.print(x);
         }
     }
 }
