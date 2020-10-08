@@ -1,12 +1,12 @@
 package lesson5;
 
 public class Person {
-    String name;
-    String position;
-    String email;
-    String telephone;
-    String salary;
-    int age;
+    private String name;
+    private String position;
+    private String email;
+    private String telephone;
+    private String salary;
+    private int age;
 
     public Person(String name, String position, String email, String telephone, String salary, int age) {
         this.name = name;
