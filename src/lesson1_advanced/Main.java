@@ -41,7 +41,7 @@ public class Main {
                 }
             }
         }
-
+//
 //          cat.run(treadmill);
 ////        person.run(treadmill);
 ////        robot.run(treadmill);
