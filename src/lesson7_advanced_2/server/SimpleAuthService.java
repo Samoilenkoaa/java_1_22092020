@@ -1,4 +1,4 @@
-package lesson7_advanced.server;
+package lesson7_advanced_2.server;
 
 import java.util.ArrayList;
 import java.util.List;
