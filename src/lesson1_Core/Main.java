@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         //TASK 1
         Integer arr1[] = {1, 2, 3, 4, 5, 6, 7};
-        String arr2[] = {"A", "B", "C"};
+        String arr2[] = {"A", "B", "C", "D"};
         swap(arr1, 1, 4);
         swap(arr2, 0, 2);
 
